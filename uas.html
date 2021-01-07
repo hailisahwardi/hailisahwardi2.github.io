@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {background-color: blanchedalmond;}
+</style>
+<meta charset=utf-8 />
+<title> Kalkulasi Persamaan Kuadrat</title>
+</head>
+<body>
+ <h1> Haili Sahwardi (1910131210016) </h1>
+<form>
+<p> Silahkan masukkan nilai a, b, dan c dari persamaan kuadrat yang anda inginkan. </p>
+<p> Sebagai referensi, bentuk umum persamaan kuadrat adalah ax^2 + bx + c = 0. </p>
+<label> nilai a : </label>
+<input type="text" id="nilaia" /><br>
+<label> nilai b : </label>
+<input type="text" id="nilaib" /><br>
+<label> nilai c : </label>
+<input type="text" id="nilaic" /><br>
+<input type="button" onClick="menghitung_akar_dan_diskriminan()"> Submit </button>
+<input type="button" onClick="acak()"> Coba soal? </button>
+</form>
+
+ <script type="text/javascript">
+ function menghitung_akar_dan_diskriminan(){
+ var x, y, z, D, akar1,akar2;
+ x = document.getElementById("nilaia").value;
+ y = document.getElementById("nilaib").value;
+ z = document.getElementById("nilaic").value;
+
+ D = (y*y) - (4*x*z);
+
+ if(D < 0){
+ document.write(" Persamaan yang anda masukkan tidak memiliki akar kuadrat.", "<br>");
+ }
+
+
+ else if (D == 0){
+ akar1 = akar2 = -y / (2*x);
+ document.write(" Akar ke 1 dan akar ke 2 (x1 dan x2) persamaan kuadrat ini sama,"," yaitu: ",akar1, "<br>");
+ }
+
+ else if (D > 0){
+ akar1 = (-y + Math.sqrt(D)) / (2*x);
+ akar2 = (-y - Math.sqrt(D)) / (2*x);
+ document.write(" Akar pertama (x1) persamaan kuadrat ini adalah: ",akar1, "<br>");
+ document.write(" dan akar keduanya (x2) adalah: ",akar2, "<br>"); 
+ }
+
+ document.write(" Dan diskriminan dari nilai a, b, dan c yang anda masukkan tadi adalah ",D, "<br>");}
+
+ function acak(){
+ var undian;
+ var i = 0;
+ while(i < 10){
+ undian = Math.round(Math.random() * 24);
+ if(undian == 0){
+ document.write(" x^2 + 2x + 1 = 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : -1 (sama)", "\n", "<br>");}
+
+ else if(undian == 1){
+ document.write(" x^2 + 4x + 4 = 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : -2 (sama)", "\n", "<br>");}
+
+ else if(undian == 2){
+ document.write(" x^2 + 6x + 9 = 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : -3 (sama)", "\n", "<br>");}
+
+ else if(undian == 3){
+ document.write(" x^2 + 8x + 16 = 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : -4 (sama)", "\n", "<br>");}
+
+ else if(undian == 4){
+ document.write(" x^2 + 3x + 2 = 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : -2 dan -1", "\n", "<br>");}
+
+ else if(undian == 5){
+ document.write(" x^2 + 4x + 3 = 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : -3 dan -1", "\n", "<br>");}
+
+ else if(undian == 6){
+ document.write(" x^2 + 5x + 4 = 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : -4 dan -1", "\n", "<br>");}
+
+ else if(undian == 7){
+ document.write(" x^2 + 6x + 5 = 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : -5 dan -1", "\n", "<br>");}
+
+ else if(undian == 8){
+ document.write(" x^2 + 7x + 6 = 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : -6 dan -1", "\n", "<br>");}
+
+ else if(undian == 9){
+ document.write(" x^2 + 7x + 12 = 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : -4 dan -3", "\n", "<br>");}
+
+ else if(undian == 10){
+ document.write(" x^2 + 8x + 15 = 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : -5 dan -3", "\n", "<br>");}
+
+ else if(undian == 11){
+ document.write(" x^2 + 9x + 20 = 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : -5 dan -4", "\n", "<br>");}
+
+ else if(undian == 12){
+ document.write(" x^2 + 10x + 25 = 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : -5 (sama)", "\n", "<br>");}
+
+ else if(undian == 13){
+ document.write(" x^2 + 12x + 36 = 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : -6 (sama)", "\n", "<br>");}
+
+ else if(undian == 14){
+ document.write(" x^2 + 14x + 49 = 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : -7 (sama)", "\n", "<br>");}
+
+ else if(undian == 15){
+ document.write(" x^2 + 16x + 64 = 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : -8 (sama)", "\n", "<br>");}
+
+ else if(undian == 16){
+ document.write(" x^2 + 11x + 28 = 0 ",  "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : -7 dan -4", "\n", "<br>");}
+
+ else if(undian == 17){
+ document.write(" x^2 - 6x + 9 = 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : 3 (sama)", "\n", "<br>");}
+
+ else if(undian == 18){
+ document.write(" x^2 - 8x + 16 = 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : 4 (sama)", "\n", "<br>");}
+
+ else if(undian == 19){
+ document.write(" x^2 - 7x + 10 = 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : 5 dan 2", "\n", "<br>");}
+
+
+ else if(undian == 20){
+ document.write(" x^2 - 8x + 9 = 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : 8 dan 1", "\n", "<br>");}
+
+
+ else if(undian == 21){
+ document.write(" x^2 - 8x + 16 = 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : 4 (sama)", "\n", "<br>");}
+
+
+ else if(undian == 22){
+ document.write(" x^2 - 16x + 15 = 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : 15 dan 1", "\n", "<br>");}
+
+
+ else if(undian == 23){
+ document.write(" x^2 - 18x + 17= 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : 17 dan 1", "\n", "<br>");}
+
+
+ else if(undian == 24){
+ document.write(" x^2 - 27x + 50 = 0 ", "<br>");
+ document.write(" X1 dan X2 dari persamaan kuadrat di atas adalah : 25 dan 2", "\n", "<br>");}
+
+ document.write("\n\n", "<br>");
+ 
+ i++;
+ }
+ 
+
+}
+ </script>
+
+</body>
+</html>
